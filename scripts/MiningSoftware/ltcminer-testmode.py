@@ -82,7 +82,7 @@ class Writer(Thread):
 		self.daemon = True
 		self.go = True
 		# Alternatively use test_data_cut.txt for full 910 hash test suite
-		self.infile = open("../../scripts/test_data.txt","r")
+		self.infile = open("../test_data.txt","r")
 		self.nonce = 0
 		self.nonce_tested = 0
 		self.nonce_ok = 0

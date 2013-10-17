@@ -33,27 +33,12 @@ the previous behaviour set the NOMULTICORE macro (but ONLY if using a single cor
 
 Contents
 --------
-DE2-115-Single  Single full scratchpad core, this is the simplest implementation.
-
-DE0-Nano        Uses interpolation as the full scratchpad does not fit (this is the
-                same as LOOKAHEAD_GAP=2 in GPU). Test results ...
-                1.16 kHash/sec at 25Mhz (this is Fmax at 85C/Slow model)
-                2.09 kHash/sec at 45Mhz
-                Fmax is 25MHz, so anything greater may not work reliably on your device.
-                BEWARE the onboard psu regulators run HOT to VERY HOT. You may fry them!
-
 experimental    New code, not all fully working.
 
 ICARUS-LX150    A Xilinx LX150 multicore port for ngzhang's Icarus/Lancelot boards.
 
+Nexys4-Artix7	A Xilinx Artix7-100T multicore port for Digilent Nexys4 Dev-Board
+
 scripts         Mining scripts.
 
 source          Verilog source code.
-
-Usage
------
-The Altera ports (DE0-Nano) require installation of Quartus II software. For MS Windows
-set mining pool connection details by editing scripts/config.tcl then run scripts/mine.bat
-This uses getwork protocol and timeouts may occur. There are some configuration switches
-in mine.tcl, eg it can run in test mode which sends historical block headers to the fpga
-with known nonce results. Use of a stratum proxy server is recommended.
